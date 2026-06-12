@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Древо лора - Фукито</title>
+    <!-- Подключаем наш идеальный общий CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="sidebar">
+        <div class="studio-title">Древо лора</div>
+        
+        <div class="nav-tabs">
+            <button class="tab-btn active">Страны</button>
+            <button class="tab-btn">Биомы</button>
+            <button class="tab-btn">Бестиарий</button>
+        </div>
+
+        <!-- Обновленное меню (Фукито теперь активна) -->
+        <div class="list-container">
+            <a href="index.html" class="list-item-link">Таврикия</a>
+            <a href="fulmira.html" class="list-item-link">Фулмира</a>
+            <a href="dolnostar.html" class="list-item-link">Дольностар</a>
+            <a href="eldarnia.html" class="list-item-link">Эльдарния</a>
+            <a href="fukito.html" class="list-item-link active">Фукито</a>
+            <a href="#" class="list-item-link">Орденбор</a>
+            <a href="#" class="list-item-link">Хальтонстон</a>
+            <a href="#" class="list-item-link">Аластарния</a>
+            <a href="#" class="list-item-link">Артенвол</a>
+        </div>
+    </aside>
+
+    <!-- ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="mode-indicator">Режим: <strong>Мастер (Редактирование)</strong></div>
+            <button class="btn-edit">Изменить статью</button>
+        </div>
+
+        <div class="content-body">
+            <article class="article-view">
+                <h1 class="article-title">Фукито</h1>
+                
+                <div class="article-tabs">
+                    <button class="inner-tab-btn active" onclick="openSubTab(event, 'general')">Общие сведения</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'geography')">География и Арты</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'culture')">Культура и Законы</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'politics')">Политика</button>
+                </div>
+
+                <!-- Вкладка 1: Общие сведения -->
+                <div id="general" class="tab-content active">
+                    <p>Восточный регион Аурунита. Самая закрытая страна на континенте.</p>
+                    <p><strong>Столица:</strong> Минато. Этот город располагается в самом сердце Фукито и построен он вокруг великого храма стихий.</p>
+                    <p><strong>Правитель и строй:</strong> Жесткая диктатура Сёгуна Такеды. Он удерживает силу с помощью подконтрольных себе кланов-воинов.</p>
+                    <p><strong>Атмосфера:</strong> Вечная изоляция, культ чести. Завораживающие виды гор, сакуры и бамбука под жестким контролем государства.</p>
+                    <img src="https://i.pinimg.com/originals/80/26/8f/80268f440761ab3c4e559957f228dd27.jpg" alt="Герб Фукито" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 2: География -->
+                <div id="geography" class="tab-content">
+                    <p><strong>Ландшафт:</strong> Высокие горы, рисовые поля, высокие заросли бамбука, цветущая сакура вдоль рек.</p>
+                    <p><strong>Особенности городов:</strong> Города здесь представляют собой завораживающие селения с большим количеством храмов и прекрасными вплетениями природы.</p>
+                    <p><strong>Главный ресурс:</strong> Особый "Призрачный бамбук" (легкий и прочный как сталь, используется для луков и доспехов) и редкий чай, усиливающий магическую концентрацию.</p>
+                    <img src="https://i.pinimg.com/originals/a5/42/fe/a542fec197d3402eecbb8a8f945eb67b.jpg" alt="Пейзажи Фукито" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 3: Культура -->
+                <div id="culture" class="tab-content">
+                    <p><strong>Отношение к магии:</strong> Практика уникальных техник: призывы духов природы, ками, магия стихий.</p>
+                    <p><strong>Религия:</strong> Почитание Духов Предков и Хранителей Стихий.</p>
+                    <p><strong>Табу:</strong> Запрет на пересечение границы без соответствующего разрешения от вышестоящих органов (работает как для граждан Фукито, так и для иностранцев).</p>
+                    <img src="https://cs12.pikabu.ru/post_img/2021/03/27/8/og_og_1616848609221950901.jpg" alt="Культура Фукито" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 4: Политика -->
+                <div id="politics" class="tab-content">
+                    <p><strong>Внешняя политика:</strong> Полный изоляционизм. Фукито держит нейтралитет, пресекает любые имперские амбиции соседей и не вмешивается в чужие конфликты.</p>
+                    <p><strong>Внутренние угрозы:</strong> Скрытая война теневых кланов ниндзя и мятежных лордов, которые мечтают свергнуть Сёгуна, открыть порты и наладить торговлю с Эльдарнией.</p>
+                    <img src="https://i.pinimg.com/originals/d7/6f/38/d76f38e9e3a05beda11db14709abb58e.jpg?nii=t" alt="Самураи Сёгуна" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК -->
+    <script>
+        function openSubTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("inner-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

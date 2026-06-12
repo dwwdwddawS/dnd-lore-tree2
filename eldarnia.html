@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Древо лора - Эльдарния</title>
+    <!-- Подключаем наш идеальный общий CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="sidebar">
+        <div class="studio-title">Древо лора</div>
+        
+        <div class="nav-tabs">
+            <button class="tab-btn active">Страны</button>
+            <button class="tab-btn">Биомы</button>
+            <button class="tab-btn">Бестиарий</button>
+        </div>
+
+        <!-- Обновленное меню (Эльдарния теперь активна и ведет сама на себя) -->
+        <div class="list-container">
+            <a href="index.html" class="list-item-link">Таврикия</a>
+            <a href="fulmira.html" class="list-item-link">Фулмира</a>
+            <a href="dolnostar.html" class="list-item-link">Дольностар</a>
+            <a href="eldarnia.html" class="list-item-link active">Эльдарния</a>
+            <a href="#" class="list-item-link">Орденбор</a>
+            <a href="fukito.html" class="list-item-link">Фукито</a>
+            <a href="#" class="list-item-link">Хальтонстон</a>
+            <a href="#" class="list-item-link">Аластарния</a>
+            <a href="#" class="list-item-link">Артенвол</a>
+        </div>
+    </aside>
+
+    <!-- ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="mode-indicator">Режим: <strong>Мастер (Редактирование)</strong></div>
+            <button class="btn-edit">Изменить статью</button>
+        </div>
+
+        <div class="content-body">
+            <article class="article-view">
+                <h1 class="article-title">Эльдарния</h1>
+                
+                <div class="article-tabs">
+                    <button class="inner-tab-btn active" onclick="openSubTab(event, 'general')">Общие сведения</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'geography')">География и Арты</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'culture')">Культура и Законы</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'politics')">Политика</button>
+                </div>
+
+                <!-- Вкладка 1: Общие сведения -->
+                <div id="general" class="tab-content active">
+                    <p>Самый злачный регион павшей Фараксии.</p>
+                    <p><strong>Столица:</strong> Вальтеншейр. Это белокаменный город, воздвигнутый вокруг дворца Айнура.</p>
+                    <p><strong>Правитель и строй:</strong> Совет мудрецов во главе с архимагом Лайтмуном.</p>
+                    <p><strong>Атмосфера:</strong> Богатство и роскошь. Изысканные одежды, дорогие артефакты и магические руны здесь повсюду.</p>
+                    <img src="https://i.pinimg.com/originals/eb/a1/38/eba138faec79b8bd2629e99ad2612047.jpg?nii=t++" alt="Герб Эльдарнии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 2: География -->
+                <div id="geography" class="tab-content">
+                    <p><strong>Ландшафт:</strong> Преимущественно равнины, есть небольшой горный хребет, много лесов.</p>
+                    <p><strong>Особенности городов:</strong> Города здесь представляют собой величественные сооружения, включающие в себя исполинские статуи и монументы. В каждом городе есть своя уникальная школа магии, из-за чего каждое поселение имеет большую ценность.</p>
+                    <p><strong>Главный ресурс:</strong> Магические кристаллы, свитки и артефакты.</p>
+                    <img src="https://i.pinimg.com/736x/6c/3e/ee/6c3eee54a87bc6cf2becf843c04a4c83.jpg" alt="Пейзажи Эльдарнии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 3: Культура -->
+                <div id="culture" class="tab-content">
+                    <p><strong>Отношение к магии:</strong> Магия в Эльдарнии — это центральный столп страны. Она уважается и почитается.</p>
+                    <p><strong>Религия:</strong> Вера в богиню-мать. Именно она дарует магическую силу, по мнению эльдарцев.</p>
+                    <p><strong>Табу:</strong> Запрет на некромантию и магию крови.</p>
+                    <img src="https://i.pinimg.com/736x/17/5c/aa/175caae6d6a584482ba58462c07153a6.jpg" alt="Культура Эльдарнии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 4: Политрка -->
+                <div id="politics" class="tab-content">
+                    <p><strong>Внешняя политика:</strong> Финансовая помощь Фулмире, дабы она сдерживала Таврикию. Эльдарния также сохраняет дружественные отношения с другими странами Аурунита.</p>
+                    <p><strong>Внутренняя политика:</strong> Внутри Эльдарнии назревают народные волнения. Повстанцы-роялисты считают, что совет — предатели, которые развалили великую империю Фараксию 35 лет назад и хотят вернуть старую династию.</p>
+                    <img src="https://i.pinimg.com/736x/cd/63/3d/cd633d72fc97671edd81ef5db1ade7ac.jpg" alt="Политические волнения" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК -->
+    <script>
+        function openSubTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("inner-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
