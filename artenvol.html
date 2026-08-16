@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Древо лора - Артенвол</title>
+    <!-- Подключаем наш надежный рабочий CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="sidebar">
+        <div class="studio-title">Древо лора</div>
+        
+        <div class="nav-tabs">
+            <button class="tab-btn active">Страны</button>
+            <button class="tab-btn">Биомы</button>
+            <button class="tab-btn">Бестиарий</button>
+        </div>
+
+        <!-- Меню со всеми 9 странами (Артенвол теперь активен!) -->
+        <div class="list-container">
+            <a href="index.html" class="list-item-link">Таврикия</a>
+            <a href="fulmira.html" class="list-item-link">Фулмира</a>
+            <a href="dolnostar.html" class="list-item-link">Дольностар</a>
+            <a href="eldarnia.html" class="list-item-link">Эльдарния</a>
+            <a href="fukito.html" class="list-item-link">Фукито</a>
+            <a href="ordenbor.html" class="list-item-link">Орденбор</a>
+            <a href="haltonston.html" class="list-item-link">Хальтонстон</a>
+            <a href="alastarnia.html" class="list-item-link">Аластарния</a>
+            <a href="artenvol.html" class="list-item-link active">Артенвол</a>
+        </div>
+    </aside>
+
+    <!-- ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="mode-indicator">Режим: <strong>Мастер (Редактирование)</strong></div>
+            <button class="btn-edit">Изменить статью</button>
+        </div>
+
+        <div class="content-body">
+            <article class="article-view">
+                <h1 class="article-title">Артенвол</h1>
+                
+                <div class="article-tabs">
+                    <button class="inner-tab-btn active" onclick="openSubTab(event, 'general')">Визитная карточка</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'geography')">География</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'culture')">Культура</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'politics')">Политика</button>
+                </div>
+
+                <!-- Вкладка 1: Визитная карточка -->
+                <div id="general" class="tab-content active">
+                    <p><strong>Природа здесь превыше всего.</strong></p>
+                    <p><strong>Столица:</strong> Икшель. Как говорят местные жители, их столица это: «Венец природы».</p>
+                    <p><strong>Правитель и строй:</strong> Верховный друид, монархия.</p>
+                    <p><strong>Атмосфера:</strong> Завораживающая дикая и бурная природа создаёт атмосферу умиротворения.</p>
+                    <img src="https://i.pinimg.com/originals/ce/af/12/ceaf121cd125873c5ef91969a986cddd.jpg" alt="Герб Артенвола" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 2: География -->
+                <div id="geography" class="tab-content">
+                    <p><strong>Ландшафт:</strong> Территория острова сплошь покрыта растительностью: дышащие растения, деревья, плоды и незаметные тропы сквозь заросли. В центре государства расположились спящие вулканы.</p>
+                    <p><strong>Особенности городов:</strong> Города полностью состоят из растительности.</p>
+                    <p><strong>Главный ресурс:</strong> Древний хитин и «бурные» споры.</p>
+                    <img src="https://i.pinimg.com/736x/a4/9d/1a/a49d1a213b4671c4a5afccdf6fb9f941.jpg" alt="Пейзажи Артенвола" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 3: Культура -->
+                <div id="culture" class="tab-content">
+                    <p><strong>Отношение к магии:</strong> Приветствуется первобытная магия.</p>
+                    <p><strong>Религия:</strong> Вера в природу-мать.</p>
+                    <p><strong>Табу:</strong> Жёсткий запрет на вред растениям.</p>
+                    <img src="https://i.pinimg.com/736x/28/26/d5/2826d5fbb9f32aaba983ab72687dd662.jpg" alt="Культура Артенвола" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 4: Политика -->
+                <div id="politics" class="tab-content">
+                    <p><strong>Внешняя политика:</strong> Дружественные отношения с Аластарнией, торговля с Эльдарнией и холодная война с Дольностаром.</p>
+                    <p><strong>Внутренняя политика:</strong> Внутри страны зреет конфликт. Гуманоиды из хитина и спор, которых сделали эльфы-друиды для «грязной работы» начали восставать против своих же создателей. Пока их немного, но это лишь вопрос времени.</p>
+                    <img src="https://i.pinimg.com/originals/60/ef/9d/60ef9d524119570e709cb1697f07661a.jpg" alt="Политика Артенвола" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК -->
+    <script>
+        function openSubTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("inner-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
