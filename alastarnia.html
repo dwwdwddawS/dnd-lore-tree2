@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Древо лора - Аластарния</title>
+    <!-- Подключаем наш надежный рабочий CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="sidebar">
+        <div class="studio-title">Древо лора</div>
+        
+        <div class="nav-tabs">
+            <button class="tab-btn active">Страны</button>
+            <button class="tab-btn">Биомы</button>
+            <button class="tab-btn">Бестиарий</button>
+        </div>
+
+        <!-- Меню с активной Аластарнией -->
+        <div class="list-container">
+            <a href="index.html" class="list-item-link">Таврикия</a>
+            <a href="fulmira.html" class="list-item-link">Фулмира</a>
+            <a href="dolnostar.html" class="list-item-link">Дольностар</a>
+            <a href="eldarnia.html" class="list-item-link">Эльдарния</a>
+            <a href="fukito.html" class="list-item-link">Фукито</a>
+            <a href="ordenbor.html" class="list-item-link">Орденбор</a>
+            <a href="haltonston.html" class="list-item-link">Хальтонстон</a>
+            <a href="alastarnia.html" class="list-item-link active">Аластарния</a>
+            <a href="#" class="list-item-link">Артенвол</a>
+        </div>
+    </aside>
+
+    <!-- ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="mode-indicator">Режим: <strong>Мастер (Редактирование)</strong></div>
+            <button class="btn-edit">Изменить статью</button>
+        </div>
+
+        <div class="content-body">
+            <article class="article-view">
+                <h1 class="article-title">Аластарния</h1>
+                
+                <div class="article-tabs">
+                    <button class="inner-tab-btn active" onclick="openSubTab(event, 'general')">Визитная карточка</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'geography')">География</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'culture')">Культура</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'politics')">Политика</button>
+                </div>
+
+                <!-- Вкладка 1: Визитная карточка -->
+                <div id="general" class="tab-content active">
+                    <p><strong>Страна, ни разу не падшая в битве.</strong></p>
+                    <p><strong>Столица:</strong> Кинсес. Столица считается верхом развития технологий и культуры страны.</p>
+                    <p><strong>Правитель и строй:</strong> Фараон Киртес II. Монархия.</p>
+                    <p><strong>Атмосфера:</strong> Спокойная обстановка, райские виды и испепеляющая жара.</p>
+                    <img src="alastarnia-general.jpg" alt="Герб Аластарнии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 2: География -->
+                <div id="geography" class="tab-content">
+                    <p><strong>Ландшафт:</strong> Бескрайние пустыни, скалистые горы и прибрежные леса.</p>
+                    <p><strong>Особенности городов:</strong> В основном города торгового назначения. Есть и бедные, и богатые районы. Обычное население живёт в низеньких домах из песчаника.</p>
+                    <p><strong>Главный ресурс:</strong> Эфирный Кремний, сверхпрочное стекло.</p>
+                    <img src="alastarnia-geography.jpg" alt="Пейзажи Аластарнии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 3: Культура -->
+                <div id="culture" class="tab-content">
+                    <p><strong>Отношение к магии:</strong> Почетается магия солнца.</p>
+                    <p><strong>Религия:</strong> Вера в богов солнечного пантеона.</p>
+                    <p><strong>Табу:</strong> Жёсткий запрет на загрязнение воды.</p>
+                    <img src="alastarnia-culture.jpg" alt="Культура Аластарнии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 4: Политика -->
+                <div id="politics" class="tab-content">
+                    <p><strong>Внешняя политика:</strong> Аластарния торгует стеклом с гномами Дольностара. Эльдарнские маги постоянно скупают Аластарнийский Эфирный кремень, так как это лучший природный накопитель и стабилизатор для их заклинаний.</p>
+                    <p><strong>Внутренняя политика:</strong> Зреет восстание нижних слоёв общества против богатых жрецов.</p>
+                    <img src="alastarnia-politics.jpg" alt="Политика Султаната" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК -->
+    <script>
+        function openSubTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("inner-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

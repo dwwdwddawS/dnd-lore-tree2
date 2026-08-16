@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Древо лора - Хальтонстон</title>
+    <!-- Подключаем наш надежный общий CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="sidebar">
+        <div class="studio-title">Древо лора</div>
+        
+        <div class="nav-tabs">
+            <button class="tab-btn active">Страны</button>
+            <button class="tab-btn">Биомы</button>
+            <button class="tab-btn">Бестиарий</button>
+        </div>
+
+        <!-- Меню (Хальтонстон теперь активен и ведет сам на себя) -->
+        <div class="list-container">
+            <a href="index.html" class="list-item-link">Таврикия</a>
+            <a href="fulmira.html" class="list-item-link">Фулмира</a>
+            <a href="dolnostar.html" class="list-item-link active">Дольностар</a>
+            <a href="eldarnia.html" class="list-item-link">Эльдарния</a>
+            <a href="fukito.html" class="list-item-link">Фукито</a>
+            <a href="ordenbor.html" class="list-item-link">Орденбор</a>
+            <a href="haltonston.html" class="list-item-link">Хальтонстон</a>
+            <a href="alastarnia.html" class="list-item-link active">Аластарния</a>
+            <a href="#" class="list-item-link">Артенвол</a>
+        </div>
+    </aside>
+
+    <!-- ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="mode-indicator">Режим: <strong>Мастер (Редактирование)</strong></div>
+            <button class="btn-edit">Изменить статью</button>
+        </div>
+
+        <div class="content-body">
+            <article class="article-view">
+                <h1 class="article-title">Хальтонстон</h1>
+                
+                <div class="article-tabs">
+                    <button class="inner-tab-btn active" onclick="openSubTab(event, 'general')">Общие сведения</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'geography')">География и Арты</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'culture')">Культура и Законы</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'politics')">Политика</button>
+                </div>
+
+                <!-- Вкладка 1: Общие сведения -->
+                <div id="general" class="tab-content active">
+                    <p>Уникальный архипелаг вольных наёмников.</p>
+                    <p><strong>Столица:</strong> Фампирсхейв. Прибрежный город наёмников.</p>
+                    <p><strong>Правитель и строй:</strong> Страну удерживает совет адмиралов.</p>
+                    <p><strong>Атмосфера:</strong> Дым портовых таверн, треск костров на палубах, звон чужеземных монет, штормовой ветер с океана и дух абсолютной, порой жестокой свободы.</p>
+                    <img src="https://avatars.mds.yandex.net/i?id=14019b1008af3f16a375e1b659efc887_l-10782253-images-thumbs&n=13" alt="Герб Хальтонстона" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 2: География -->
+                <div id="geography" class="tab-content">
+                    <p><strong>Ландшафт:</strong> Горные хребты, острова и равнины, также встречаются редкие леса.</p>
+                    <p><strong>Особенности городов:</strong> Города внутри страны представляют собой обыкновенные поселения, подконтрольные гильдиям. На границах же разместились укреплённые поселения с крепкими стенами и орудиями, защищающие страну от морских чудовищ и враждебных чужеземцев.</p>
+                    <p><strong>Главный ресурс:</strong> Китовый жир, ворвань, а также большое кол-во наёмников и военных кораблей.</p>
+                    <img src="https://i.pinimg.com/originals/50/81/18/5081181b3b5140ffb15659289c1f3a66.jpg" alt="Пейзажи Хальтонстона" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 3: Культура -->
+                <div id="culture" class="tab-content">
+                    <p><strong>Отношение к магии:</strong> Нейтральное.</p>
+                    <p><strong>Религия:</strong> Поклонение Свирепому Богу Штормов и Морской Деве.</p>
+                    <p><strong>Табу:</strong> Жёсткий запрет на неисполнение договоров.</p>
+                    <img src="https://i.pinimg.com/originals/be/a2/4b/bea24b055800b2b19a40238c275aab48.jpg?nii=t" alt="Культура Хальтонстона" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 4: Политика -->
+                <div id="politics" class="tab-content">
+                    <p><strong>Внешняя политика:</strong> Торгуют со всеми и воюют за тех, кто платит. Снабжают наемниками Фулмиру, но бароны Эльдарнии часто перекупают их флоты ради своих целей.</p>
+                    <p><strong>Внутренняя политика:</strong> Раскол гильдий наёмников. Молодое поколение считает совет дураками и мечтает их свергнуть.</p>
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/017/629/471/large/olie-boldador-valiantvipercrewsignedred.jpg?1556745392" alt="Морские гильдии" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК -->
+    <script>
+        function openSubTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("inner-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

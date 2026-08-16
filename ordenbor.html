@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Древо лора - Орденбор</title>
+    <!-- Подключаем наш рабочий CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- БОКОВАЯ ПАНЕЛЬ -->
+    <aside class="sidebar">
+        <div class="studio-title">Древо лора</div>
+        
+        <div class="nav-tabs">
+            <button class="tab-btn active">Страны</button>
+            <button class="tab-btn">Биомы</button>
+            <button class="tab-btn">Бестиарий</button>
+        </div>
+
+        <!-- Обновленное меню (Орденбор теперь активен) -->
+       <div class="list-container">
+            <a href="index.html" class="list-item-link">Таврикия</a>
+            <a href="fulmira.html" class="list-item-link">Фулмира</a>
+            <a href="dolnostar.html" class="list-item-link active">Дольностар</a>
+            <a href="eldarnia.html" class="list-item-link">Эльдарния</a>
+            <a href="fukito.html" class="list-item-link">Фукито</a>
+            <a href="ordenbor.html" class="list-item-link">Орденбор</a>
+            <a href="haltonston.html" class="list-item-link">Хальтонстон</a>
+            <a href="alastarnia.html" class="list-item-link active">Аластарния</a>
+            <a href="#" class="list-item-link">Артенвол</a>
+        </div>
+    </aside>
+
+    <!-- ГЛАВНАЯ РАБОЧАЯ ОБЛАСТЬ -->
+    <main class="main-content">
+        <div class="top-bar">
+            <div class="mode-indicator">Режим: <strong>Мастер (Редактирование)</strong></div>
+            <button class="btn-edit">Изменить статью</button>
+        </div>
+
+        <div class="content-body">
+            <article class="article-view">
+                <h1 class="article-title">Орденбор</h1>
+                
+                <div class="article-tabs">
+                    <button class="inner-tab-btn active" onclick="openSubTab(event, 'general')">Общие сведения</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'geography')">География и Арты</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'culture')">Культура и Законы</button>
+                    <button class="inner-tab-btn" onclick="openSubTab(event, 'politics')">Политика</button>
+                </div>
+
+                <!-- Вкладка 1: Общие сведения -->
+                <div id="general" class="tab-content active">
+                    <p>Северный и вечно холодный регион Аурунита.</p>
+                    <p><strong>Столица:</strong> Эсгарт. Это мрачный город, построенный вокруг великого замка Вудрога.</p>
+                    <p><strong>Правитель и строй:</strong> Король ворог удерживает монархию.</p>
+                    <p><strong>Общая атмосфера:</strong> Вечный холод, большое количество чудовищ и охотников на них. На улице лишь слышны стоны и ветер, дующий как будто отовсюду.</p>
+                    <img src="https://i.pinimg.com/originals/5d/37/0d/5d370de4a315cbb4e1549230906ed269.jpg?nii=t" alt="Герб Орденбора" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 2: География -->
+                <div id="geography" class="tab-content">
+                    <p><strong>Ландшафт:</strong> Ледяные пустоши, чёрные леса и огромный горный хребет, отделяющий страну от всего остального мира.</p>
+                    <p><strong>Особенности городов:</strong> Никаких величественных сооружений, просто практичные и суровые города, отделённые стенами.</p>
+                    <p><strong>Главный ресурс:</strong> Экстракты из монстров, редкие яды, алхимическое серебро и «Кровь чащи» — смола древних деревьев, которая имеет заживляющие и антимагические свойства.</p>
+                    <img src="https://i.pinimg.com/originals/c9/39/1a/c9391ad14c595ab61b2943beb0e0d99f.jpg" alt="Пейзажи Орденбора" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 3: Culture -->
+                <div id="culture" class="tab-content">
+                    <p><strong>Отношение к магии:</strong> Жители Орденбора не пользуются обычной магией, вместо этого они заключают контракты с магическими духами.</p>
+                    <p><strong>Религия:</strong> Единая религия отсутствует.</p>
+                    <p><strong>Табу:</strong> Гражданские не имеют права выходить на улицу в ночное время.</p>
+                    <img src="https://i.pinimg.com/originals/74/f4/03/74f403fe61443b9479478279958c5ab8.jpg?nii=t" alt="Культура и духи Орденбора" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+
+                <!-- Вкладка 4: Политика -->
+                <div id="politics" class="tab-content">
+                    <p><strong>Внешняя политика:</strong> Полная изоляция. Правительство считает южан глупцами. Их единственная миссия — удерживать древнее Зло, запертое в глубинах северных лесов, чтобы оно не вырвалось на материк. Единственный союз есть с Хальтонстоном</p>
+                    <p><strong>Внутренняя угроза:</strong> Постоянные распри между гильдиями охотников на монстров.</p>
+                    <img src="https://i.pinimg.com/originals/57/ef/20/57ef20526c05b7cc4d2724c3b825e7a3.png" alt="Внутренние угрозы" class="tab-art-box" onerror="this.style.display='none';">
+                </div>
+в
+            </article>
+        </div>
+    </main>
+
+    <!-- СКРИПТ ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК -->
+    <script>
+        function openSubTab(evt, tabId) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            const tabButtons = document.getElementsByClassName("inner-tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
